@@ -7,9 +7,9 @@ int N = GetSizeOfArray("Введите размер одномерного ма�
 
 int[] arr = GetArray(N);    //Формируем массива
 
-int numEvenNumbers = SummEvenNumbers(arr);    //Вычисляем количество четных элементов массива
+int numEvenNumbers = GetNumEvenNumbers(arr);    //Вычисляем количество четных элементов массива
 
-PrintArray(arr, numEvenNumbers);    //Выводим в консоль результатов работы программы
+PrintResult(arr, numEvenNumbers);    //Выводим в консоль результатов работы программы
 
 //-----------------------------Functions------------------------------------
 static int GetSizeOfArray(string message, string errorMessage)
@@ -36,7 +36,7 @@ static int[] GetArray(int N)
 }
 
 //-------------------------------------------------------------------------
-static int SummEvenNumbers(int[] arr)
+static int GetNumEvenNumbers(int[] arr)
 {
     int  numEvenNumbers = 0;
     foreach(int el in arr)
@@ -48,4 +48,4 @@ static int SummEvenNumbers(int[] arr)
 }
 
 //----------------------------------------------------------------------
-static void PrintArray(int[] arr, int numEvenNumbers) => Console.WriteLine($"[{String.Join(", ",arr)}] -> {numEvenNumbers}");
+static void PrintResult(int[] arr, int numEvenNumbers) => Console.WriteLine($"[{String.Join(", ",arr)}] -> {numEvenNumbers}");
