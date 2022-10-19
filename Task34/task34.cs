@@ -38,14 +38,14 @@ static int[] GetArray(int N)
 //-------------------------------------------------------------------------
 static int GetNumEvenNumbers(int[] arr)
 {
-    int  numEvenNumbers = 0;
-    foreach(int el in arr)
+    int numEvenNumbers = 0;
+    foreach (int el in arr)
     {
-        if((el % 2 ) == 0)
+        if ((el % 2) == 0)
             numEvenNumbers += 1;
     }
     return numEvenNumbers;
 }
 
 //----------------------------------------------------------------------
-static void PrintResult(int[] arr, int numEvenNumbers) => Console.WriteLine($"[{String.Join(", ",arr)}] -> {numEvenNumbers}");
+static void PrintResult(int[] arr, int numEvenNumbers) => Console.WriteLine($"[{String.Join(", ", arr)}] -> {numEvenNumbers}");
