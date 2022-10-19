@@ -8,11 +8,11 @@ Console.Clear();
 label1:
 int sizeOfArray = GetParametrOfArray("Введите размер одномерного массива: ", "Ошибка ввода!");
 Console.WriteLine($"Размер массива: {sizeOfArray}");
-if(sizeOfArray < 0)     //Отфильтровываем отрицательные значения
+if (sizeOfArray < 0)     //Отфильтровываем отрицательные значения
 {
     Console.Clear();
     Console.WriteLine("Ошибка ввода!");
-    goto label1;    //Очень не популярный оператор "goto" :(
+    goto label1;    //Очень НЕ популярный оператор "goto" :(
 }
 
 label2:
@@ -26,7 +26,7 @@ if (maxOfRange <= minOfRange) //Проверяем корректность вв
 {
     Console.Clear();
     Console.WriteLine("Ошибка ввода!");
-    goto label2;  
+    goto label2;
 }
 
 int[] arr = GetArrayRandom(sizeOfArray, minOfRange, maxOfRange);
@@ -63,12 +63,12 @@ static int[] GetArrayRandom(int N, int minOfRange, int maxOfRange)
     {
         arr[i] = new Random().Next(minOfRange, maxOfRange + 1);
     }
-        Console.WriteLine($"[{String.Join(", ", arr)}]");
-        return arr;
+    Console.WriteLine($"[{String.Join(", ", arr)}]");
+    return arr;
 }
 
 //----------------------------------------------------------------------------------
-//Функция находит сумму элементов, стоящих на нечётных позициях
+//Функция принимает массив натуральных чисел и возвращает сумму элементов, стоящих на нечётных позициях
 
 int SummOfElemInOddPositions(int N, int[] arr)
 {
@@ -81,8 +81,7 @@ int SummOfElemInOddPositions(int N, int[] arr)
 }
 
 //----------------------------------------------------------------------------------
-//Функция выводит в консоль результаты работы программы
-
+//Функция выводит в консоль массив и сумму элементов, стоящих на нечётных позициях
 static void PrintResult(int[] arr, int summOddPos)
 {
     Console.Clear();
