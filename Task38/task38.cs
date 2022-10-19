@@ -19,25 +19,25 @@ static int GetSizeOfArray(string message, string messageError)
     {
         Console.Write(message);
         bool inTrue = int.TryParse(Console.ReadLine() ?? "", out int N) && N >= 0;
-        if(inTrue)
+        if (inTrue)
             return N;
         Console.WriteLine(messageError);
-    }   
+    }
 }
 
 //-----------------------------------------------------------
 static double[] GetRandomNumber(int sizeArr, double min, double max)
-{ 
+{
     double[] arr = new double[sizeArr];
     Random rnd = new Random();
 
-    for(int i = 0; i < sizeArr; i++)
+    for (int i = 0; i < sizeArr; i++)
     {
         //sample[i] = rand.NextDouble(min, max);
         arr[i] = Math.Round((rnd.NextDouble() * (1 - 10) + 10), 2);
     }
     return arr;
-}        
+}
 
 //-----------------------------------------------------------
 static double DiffBeetwenMaxMin(double[] arr, int sizeArr)
@@ -45,12 +45,12 @@ static double DiffBeetwenMaxMin(double[] arr, int sizeArr)
     double elMin = arr[1];
     double elMax = arr[1];
 
-    for(int i = 0; i < sizeArr; i++)
+    for (int i = 0; i < sizeArr; i++)
     {
-        if(arr[i] < elMin)
+        if (arr[i] < elMin)
             elMin = arr[i];
 
-        if(arr[i] > elMax)
+        if (arr[i] > elMax)
             elMax = arr[i];
     }
     return elMax - elMin;
